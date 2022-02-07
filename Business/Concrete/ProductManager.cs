@@ -5,6 +5,7 @@ using Business.Abstract;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Concrete
 {
@@ -34,6 +35,11 @@ namespace Business.Concrete
         //iki fiyat araligindaki urunleri getirecek
         {
             return _productDal.GetAll(p => p.UnitPrice <= min && p.UnitPrice <= max);
+        }
+
+        public List<ProductDetailDto> GetProductDetails()
+        {
+            return _productDal.GetProductDetails();
         }
     }
 }
