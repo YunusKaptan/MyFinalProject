@@ -18,6 +18,7 @@ using DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Core.Utilities.Security.Encryption;
+using Microsoft.AspNetCore.Http;
 
 namespace WebAPI
 {
@@ -36,6 +37,9 @@ namespace WebAPI
             services.AddControllers();
             //services.AddSingleton<IProductService,ProductManager>();
             //services.AddSingleton<IProductDal,EfProductDal>();
+
+           //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
