@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 using Entities.Concrete;
 
@@ -14,6 +15,7 @@ namespace Business.Constants
         public static string ProductCountOfCategoryError = "There can be a maximum of 10 products in a category.";
         public static string ProductUpdated = "Product updated";
         public static string ProductNameAlreadyExists = "Product name already exists";
-        public static string CategoryLimitExceeded="Category limit exceded";
+        public static string CategoryLimitExceeded="Category limit exceeded";
+        public static string AuthorizationDenied = " Authorization denied" ;
     }
 }
